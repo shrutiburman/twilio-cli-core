@@ -153,8 +153,8 @@ jobs:
           node -e "require('$fileName').updateRelease()"
         env:
           REPO_ACCESS_TOKEN: ${{ github.token }}
-          TAG_NAME: ${{ steps.semantic-release.outputs.TAG_NAME }}
-          RELEASE_BODY: ${{needs.update-api-specs.outputs.change-log}}
+          TAG_NAME: 3.6.0
+          RELEASE_BODY: "trial Body **Library - Feature** "
           REPO_NAME:  ${{ github.repository }}
 #   triggerCliWorkflow:
 #     runs-on: ubuntu-latest
